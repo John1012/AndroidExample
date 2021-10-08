@@ -16,6 +16,9 @@ object Application {
         AndroidX.constraintLayout,
         AndroidX.lifecycleScope,
         Google.material,
+        Compose.ui,
+        Compose.material,
+        Compose.activity,
         Ktor.ktorClientCore,
         Ktor.ktorClientAndroid,
         Ktor.ktorClientSerialization,
@@ -23,13 +26,18 @@ object Application {
         Kotlinx.serialization
     )
 
+    val debugLibraries = listOf(
+        Compose.uiTooling
+    )
     val testLibraries = listOf(
-        JUnit.junit
+        JUnit.junit,
+        Compose.uiTooling
     )
 
     val androidTestLibraries = listOf(
         JUnit.extJUnit,
-        Espresso.espresso
+        Espresso.espresso,
+        Compose.uiTest
     )
 }
 
@@ -42,6 +50,12 @@ fun DependencyHandler.kapt(list: List<String>) {
 fun DependencyHandler.implementation(list: List<String>) {
     list.forEach { dependency ->
         add("implementation", dependency)
+    }
+}
+
+fun DependencyHandler.debugImplementation(list: List<String>) {
+    list.forEach { dependency ->
+        add("debugImplementation", dependency)
     }
 }
 

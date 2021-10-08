@@ -28,16 +28,26 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
     viewBinding {
         android.buildFeatures.viewBinding = true
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = library.Compose.composeVersion
     }
 }
 
 dependencies {
     implementation(Application.appLibraries)
+    debugImplementation(Application.debugLibraries)
     testImplementation(Application.testLibraries)
     androidTestImplementation(Application.androidTestLibraries)
 }
