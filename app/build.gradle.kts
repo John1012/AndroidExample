@@ -2,6 +2,7 @@ plugins {
     id(Plugins.androidApplication)
     kotlin(KotlinPlugins.android)
     kotlin(KotlinPlugins.kapt)
+    kotlin(KotlinPlugins.serialization)
 }
 
 android {

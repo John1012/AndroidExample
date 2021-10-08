@@ -14,7 +14,13 @@ object Application {
         AndroidX.appCompat,
         AndroidX.core,
         AndroidX.constraintLayout,
-        Google.material
+        AndroidX.lifecycleScope,
+        Google.material,
+        Ktor.ktorClientCore,
+        Ktor.ktorClientAndroid,
+        Ktor.ktorClientSerialization,
+        Ktor.ktorClientLogging,
+        Kotlinx.serialization
     )
 
     val testLibraries = listOf(
