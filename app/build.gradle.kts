@@ -47,6 +47,7 @@ android {
 
 dependencies {
     implementation(Application.appLibraries)
+    kapt(Application.kapt)
     debugImplementation(Application.debugLibraries)
     testImplementation(Application.testLibraries)
     androidTestImplementation(Application.androidTestLibraries)

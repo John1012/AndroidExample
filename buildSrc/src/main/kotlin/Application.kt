@@ -24,7 +24,10 @@ object Application {
         Ktor.ktorClientAndroid,
         Ktor.ktorClientSerialization,
         Ktor.ktorClientLogging,
-        Kotlinx.serialization
+        Kotlinx.serialization,
+        Dagger.dagger,
+        Dagger.android,
+        Dagger.androidSupport
     )
 
     val debugLibraries = listOf(
@@ -39,6 +42,11 @@ object Application {
         JUnit.extJUnit,
         Espresso.espresso,
         Compose.uiTest
+    )
+
+    val kapt = listOf(
+        Dagger.daggerProcessor,
+        Dagger.androidProcessor
     )
 }
 
