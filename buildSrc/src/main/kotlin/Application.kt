@@ -18,6 +18,7 @@ object Application {
         Google.material,
         Compose.ui,
         Compose.material,
+        Compose.icons,
         Compose.activity,
         Ktor.ktorClientCore,
         Ktor.ktorClientAndroid,
