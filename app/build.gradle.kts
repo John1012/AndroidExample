@@ -47,6 +47,7 @@ android {
 
 dependencies {
     implementation(Application.appLibraries)
+    implementation("com.google.android.gms:play-services-analytics-impl:17.0.0")
     debugImplementation(Application.debugLibraries)
     testImplementation(Application.testLibraries)
     androidTestImplementation(Application.androidTestLibraries)

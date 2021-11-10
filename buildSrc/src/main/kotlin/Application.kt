@@ -1,4 +1,10 @@
-import library.*
+import library.AndroidX
+import library.Compose
+import library.Espresso
+import library.Google
+import library.JUnit
+import library.Kotlinx
+import library.Ktor
 import org.gradle.api.artifacts.dsl.DependencyHandler
 
 object Application {
@@ -18,7 +24,6 @@ object Application {
         Google.material,
         Compose.ui,
         Compose.material,
-        Compose.icons,
         Compose.activity,
         Ktor.ktorClientCore,
         Ktor.ktorClientAndroid,
