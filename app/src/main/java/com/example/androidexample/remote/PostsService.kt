@@ -13,17 +13,8 @@ interface PostsService {
     suspend fun createPost(post: PostRequest): PostResponse?
 
     companion object {
-        fun create(): PostsService {
-            return PostsServiceImpl(
-                httpClient = HttpClient(Android) {
-                    install(Logging) {
-                        level = LogLevel.ALL
-                    }
-                    install(JsonFeature) {
-                        serializer = KotlinxSerializer()
-                    }
-                }
-            )
+        fun create(client: HttpClient): PostsService {
+            return PostsServiceImpl(httpClient = client)
         }
     }
 }

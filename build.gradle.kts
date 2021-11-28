@@ -8,6 +8,7 @@ buildscript {
         classpath(Build.kotlinGradlePlugin)
         classpath(Build.buildTools)
         classpath(Build.SerializationPlugin)
+        classpath(library.Hilt.plugin)
     }
 }
 

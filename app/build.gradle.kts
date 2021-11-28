@@ -3,6 +3,7 @@ plugins {
     kotlin(KotlinPlugins.android)
     kotlin(KotlinPlugins.kapt)
     kotlin(KotlinPlugins.serialization)
+    id(Plugins.hilt)
 }
 
 android {
@@ -51,4 +52,8 @@ dependencies {
     debugImplementation(Application.debugLibraries)
     testImplementation(Application.testLibraries)
     androidTestImplementation(Application.androidTestLibraries)
+}
+
+kapt {
+    correctErrorTypes = true
 }
