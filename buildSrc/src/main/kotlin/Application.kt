@@ -30,7 +30,9 @@ object Application {
         Retrofit.gson,
         Kotlinx.coroutine,
         Kotlinx.coroutineAndroid,
-        Hilt.hilt
+        Hilt.hilt,
+        Room.runtime,
+        Room.ktx
     )
 
     val debugLibraries = listOf(
@@ -48,7 +50,8 @@ object Application {
     )
 
     val kapt = listOf(
-        Hilt.processor
+        Hilt.processor,
+        Room.compiler
     )
 }
 
