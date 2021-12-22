@@ -32,7 +32,8 @@ object Application {
         Kotlinx.coroutineAndroid,
         Hilt.hilt,
         Room.runtime,
-        Room.ktx
+        Room.ktx,
+        Navigation.compose
     )
 
     val debugLibraries = listOf(
