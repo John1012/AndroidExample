@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 
@@ -29,10 +30,29 @@ import com.example.androidexample.ui.theme.TASK_ITEM_ELEVATION
 import com.example.ktorexample.ui.theme.taskItemBackgroundColor
 import com.example.ktorexample.ui.theme.taskItemTextColor
 import androidx.compose.foundation.lazy.items
+import com.example.androidexample.utils.RequestState
 
 @ExperimentalMaterialApi
 @Composable
 fun ListContent(
+    tasks: RequestState<List<TodoTask>>,
+    navigateToTaskScreen: (taskId: Int) -> Unit
+) {
+    if (tasks is RequestState.Success) {
+        if (tasks.data.isEmpty()) {
+            EmptyContent()
+        } else {
+            DisplayContent(
+                tasks.data,
+                navigateToTaskScreen
+            )
+        }
+    }
+}
+
+@ExperimentalMaterialApi
+@Composable
+fun DisplayContent(
     tasks: List<TodoTask>,
     navigateToTaskScreen: (taskId: Int) -> Unit
 ) {
@@ -86,8 +106,7 @@ fun TaskItem(
                 ) {
                     Canvas(
                         modifier = Modifier
-                            .width(PRIORITY_INDICATOR_SIZE)
-                            .height(PRIORITY_INDICATOR_SIZE)
+                            .size(PRIORITY_INDICATOR_SIZE)
                     ) {
                         drawCircle(
                             color = todoTask.priority.color
