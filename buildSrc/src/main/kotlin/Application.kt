@@ -33,7 +33,8 @@ object Application {
         Hilt.hilt,
         Room.runtime,
         Room.ktx,
-        Navigation.compose
+        Navigation.compose,
+        DataStore.preference
     )
 
     val debugLibraries = listOf(
