@@ -8,4 +8,5 @@ object Compose {
     const val activity = "androidx.activity:activity-compose:1.3.0-alpha06"
     const val uiTooling = "androidx.compose.ui:ui-tooling:$composeVersion"
     const val uiTest = "androidx.compose.ui:ui-test-junit4:$composeVersion"
+    const val splashScreen = "androidx.core:core-splashscreen:1.0.0-alpha01"
 }

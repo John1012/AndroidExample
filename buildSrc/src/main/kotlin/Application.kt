@@ -21,6 +21,7 @@ object Application {
         Compose.material,
         Compose.icons,
         Compose.activity,
+        Compose.splashScreen,
         Ktor.ktorClientCore,
         Ktor.ktorClientAndroid,
         Ktor.ktorClientSerialization,
