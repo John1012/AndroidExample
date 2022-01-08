@@ -1,5 +1,6 @@
 package com.example.androidexample.ui.screens.list
 
+import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.FloatingActionButton
 import androidx.compose.material.Icon
@@ -24,6 +25,7 @@ import com.example.androidexample.utils.SearchAppBarState
 import com.example.ktorexample.ui.theme.fabBackgroundColor
 import kotlinx.coroutines.launch
 
+@ExperimentalAnimationApi
 @ExperimentalMaterialApi
 @Composable
 fun ListScreen(
@@ -68,6 +70,10 @@ fun ListScreen(
                 highPriorityTasks = highPriorityTasks,
                 lowPriorityTasks = lowPriorityTasks,
                 sortState = sortState,
+                onSwipeToDelete = { action, task ->
+                    sharedViewModel.action.value = action
+                    sharedViewModel.updateTaskFields(selectedTask = task)
+                },
                 navigateToTaskScreen = navigateToTaskScreen
             )
         }
