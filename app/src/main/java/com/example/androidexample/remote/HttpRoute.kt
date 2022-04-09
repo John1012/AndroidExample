@@ -1,6 +1,6 @@
 package com.example.androidexample.remote
 
 object HttpRoutes {
-    private const val BASE_URL = "https://jsonplaceholder.typicode.com"
-    const val POSTS = "$BASE_URL/posts"
+    private const val CAROUSELL_URL = "https://storage.googleapis.com"
+    const val NEWS_URL = "$CAROUSELL_URL/carousell-interview-assets/android/carousell_news.json"
 }

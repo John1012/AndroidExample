@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">AndroidExample</string>
+    <string name="app_name">Carousell News</string>
+    <string name="recent">Recent</string>
+    <string name="popular">Popular</string>
+    <string name="sad_face_icon">Sad Face Icon</string>
+    <string name="empty_screen">No News Found</string>
+    <string name="server_error">No Internet or Server Error</string>
 </resources>

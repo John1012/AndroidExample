@@ -1,23 +1,23 @@
 package com.example.androidexample
 
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.lifecycle.lifecycleScope
-import com.example.androidexample.remote.PostsService
+import androidx.activity.viewModels
+import com.example.androidexample.screen.NewsScreen
+import com.example.androidexample.screen.NewsViewModel
+import com.example.androidexample.ui.theme.AndroidExampleTheme
 import dagger.hilt.android.AndroidEntryPoint
-import io.ktor.client.HttpClient
-import kotlinx.coroutines.launch
-import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
-
+    private val newsViewModel: NewsViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-
+            AndroidExampleTheme {
+                NewsScreen(viewModel = newsViewModel)
+            }
         }
     }
 }

@@ -30,9 +30,11 @@ object Application {
         Retrofit.gson,
         Kotlinx.coroutine,
         Kotlinx.coroutineAndroid,
+        Kotlinx.dateTime,
         Hilt.hilt,
         Room.runtime,
-        Room.ktx
+        Room.ktx,
+        Coil.coil
     )
 
     val debugLibraries = listOf(
@@ -40,7 +42,8 @@ object Application {
     )
     val testLibraries = listOf(
         JUnit.junit,
-        Compose.uiTooling
+        Compose.uiTooling,
+        Kotlinx.coroutineTest
     )
 
     val androidTestLibraries = listOf(

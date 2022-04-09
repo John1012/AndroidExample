@@ -1,7 +1,7 @@
 package library
 
 object Compose {
-    const val composeVersion = "1.0.3"
+    const val composeVersion = "1.1.1"
     const val ui = "androidx.compose.ui:ui:$composeVersion"
     const val material = "androidx.compose.material:material:$composeVersion"
     const val icons = "androidx.compose.material:material-icons-extended:$composeVersion"

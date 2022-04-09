@@ -1,4 +1,4 @@
-package com.example.ktorexample.ui.theme
+package com.example.androidexample.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
