@@ -1,5 +1,5 @@
 package library
 
 object Kotlin {
-    const val version = "1.5.30"
+    const val version = "1.6.10"
 }

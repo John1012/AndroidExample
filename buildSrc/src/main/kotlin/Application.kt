@@ -6,8 +6,8 @@ object Application {
     const val versionCode = 1
     const val versionName = "1.0.0"
     const val minSdk = 21
-    const val compileSdk = 30
-    const val targetSdk = 30
+    const val compileSdk = 31
+    const val targetSdk = 31
     const val androidTestInstrumentation = "androidx.test.runner.AndroidJUnitRunner"
 
     val appLibraries = listOf(
@@ -15,6 +15,7 @@ object Application {
         AndroidX.core,
         AndroidX.constraintLayout,
         AndroidX.lifecycleScope,
+        AndroidX.viewModelCompose,
         Google.material,
         Compose.ui,
         Compose.material,
@@ -25,7 +26,15 @@ object Application {
         Ktor.ktorClientSerialization,
         Ktor.ktorClientLogging,
         Kotlinx.serialization,
-        Hilt.hilt
+        Retrofit.retrofit,
+        Retrofit.gson,
+        Kotlinx.coroutine,
+        Kotlinx.coroutineAndroid,
+        Kotlinx.dateTime,
+        Hilt.hilt,
+        Room.runtime,
+        Room.ktx,
+        Coil.coil
     )
 
     val debugLibraries = listOf(
@@ -33,7 +42,8 @@ object Application {
     )
     val testLibraries = listOf(
         JUnit.junit,
-        Compose.uiTooling
+        Compose.uiTooling,
+        Kotlinx.coroutineTest
     )
 
     val androidTestLibraries = listOf(
@@ -43,7 +53,8 @@ object Application {
     )
 
     val kapt = listOf(
-        Hilt.processor
+        Hilt.processor,
+        Room.compiler
     )
 }
 
