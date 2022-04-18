@@ -25,7 +25,8 @@ object Application {
         Ktor.ktorClientSerialization,
         Ktor.ktorClientLogging,
         Kotlinx.serialization,
-        Hilt.hilt
+        Hilt.hilt,
+        Navigation.compose
     )
 
     val debugLibraries = listOf(
