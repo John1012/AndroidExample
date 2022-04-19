@@ -1,4 +1,4 @@
-package com.example.androidexample.remote.dao
+package com.example.remote.dao
 
 import kotlinx.serialization.Serializable
 

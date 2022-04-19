@@ -1,4 +1,4 @@
-package com.example.ktorexample.ui.theme
+package com.example.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle

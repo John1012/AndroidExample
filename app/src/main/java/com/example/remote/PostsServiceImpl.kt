@@ -1,7 +1,7 @@
-package com.example.androidexample.remote
+package com.example.remote
 
-import com.example.androidexample.remote.dao.PostRequest
-import com.example.androidexample.remote.dao.PostResponse
+import com.example.remote.dao.PostRequest
+import com.example.remote.dao.PostResponse
 import io.ktor.client.*
 import io.ktor.client.features.*
 import io.ktor.client.request.*

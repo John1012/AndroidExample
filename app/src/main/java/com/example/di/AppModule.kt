@@ -1,4 +1,4 @@
-package com.example.androidexample.di
+package com.example.di
 
 import dagger.Module
 import dagger.hilt.InstallIn

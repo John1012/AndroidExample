@@ -1,4 +1,4 @@
-package com.example.androidexample.remote
+package com.example.remote
 
 object HttpRoutes {
     private const val BASE_URL = "https://jsonplaceholder.typicode.com"
