@@ -1,21 +1,14 @@
 package com.example
 
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
-import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import androidx.navigation.compose.rememberNavController
-import androidx.navigation.navArgument
-import androidx.navigation.navDeepLink
 import com.example.ui.HomeScreen
-import kotlinx.coroutines.CoroutineScope
 
 object AppDestination {
     const val HOME_ROUTE = "home"
-    const val PROFILE_ROUTE = "profile"
 }
 
 @Composable
