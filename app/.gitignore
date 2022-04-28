@@ -1,1 +1,4 @@
 /build
+
+# IDEA config files
+.idea/
