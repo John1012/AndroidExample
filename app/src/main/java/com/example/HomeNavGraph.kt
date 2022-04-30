@@ -1,36 +1,22 @@
 package com.example
 
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.example.ui.HomeScreen
 import com.example.ui.RallyScreen
-import com.example.ui.StateScreen
 
 object AppDestination {
-    const val HOME_ROUTE = "home"
-    const val STATE_PRACTICE_ROUTE = "state"
     const val RALLY_ROUTE = "rally"
 }
 
 @Composable
-fun AppNavHost(
-    modifier: Modifier = Modifier,
-    navController: NavHostController
-) {
+fun HomeNavHost(navController: NavHostController) {
     NavHost(
         navController = navController,
-        modifier = modifier,
         startDestination = AppDestination.RALLY_ROUTE
     ) {
-        composable(AppDestination.HOME_ROUTE) {
-            HomeScreen()
-        }
-        composable(AppDestination.STATE_PRACTICE_ROUTE) {
-            StateScreen()
-        }
         composable(AppDestination.RALLY_ROUTE) {
             RallyScreen()
         }

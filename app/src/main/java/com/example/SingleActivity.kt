@@ -9,20 +9,15 @@ import com.example.theme.AndroidExampleTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class MainActivity : ComponentActivity() {
+class SingleActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            ExampleApp()
+            AndroidExampleTheme {
+                val navController = rememberNavController()
+                HomeScreen(navController = navController)
+            }
         }
-    }
-}
-
-@Composable
-fun ExampleApp() {
-    AndroidExampleTheme {
-        val navController = rememberNavController()
-        AppNavHost(navController = navController)
     }
 }
 
